@@ -29,6 +29,7 @@ The project was split into different stages:
 
 # Interesting Insights
 ### Data Generation
+* It is essential to verify that the method for data generation is accurate. (compared results with research paper)
 * Total time for simulation varies as we change the parameter (assumed to be 4*space-time)
 * Adding uniform noise for all concentrations isn't feasible since some vary more other others. (noise is of the order of change in concentrations)
 * Making time dimensionless helps the model to learn the dynamics better.
