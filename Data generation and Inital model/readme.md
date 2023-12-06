@@ -23,6 +23,11 @@ The inlet concentrations for X, Y and Z were assumed to be zero. The remaining *
 Results from the linked [research paper](https://www.researchgate.net/publication/332414465_Modeling_and_Simulation_Study_of_the_CSTR_for_Complex_Reaction_by_Using_Polymath) were first reproduced.
 This step is essential since any error complicates the modelling interpretation. 
 
+|Research Paper Concentrations|Reproduced results using `solve_ivp`|
+|-----------------------------|------------------------------------|
+|![research](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/research_paper.png)|![reproduced](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/reproduced_results.png)|
+
+
 ## Generating the datasets
 The **four** parameters were varied as given below:
 1. Flow rate ranged from *0.001* to *0.1* in *15* steps
@@ -50,6 +55,10 @@ The inputs to the model were `Flow rate, Volume, Initial Concentrations and Time
 MSE (_Mean Squared Error_) and R2 score were used to interpret the performance of the trained model.
 Hyperparameters like layers, nodes, activations and optimisers were changed to find the best model. But all combinations resulted in curves which fluctuated a lot.
 Due to several varying factors, it wasn't easy to pinpoint the exact reason for the model's behaviour. So, I went back to data generation and created four new datasets to restart the modelling procedure and find out the reason behind the fluctuating behaviour of the trained model.
+
+|Accuracy of reference model|Predictions contradicting the high accuracy|
+|----------------------------|--------|
+|![refModel](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/ref_model.png)|![bad](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/bad_pred.png)|
 
 # Conclusions
 * Successfully generated data for training.
