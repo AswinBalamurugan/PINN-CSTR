@@ -1,8 +1,7 @@
 Please refer: [My Project Collection](https://github.com/AswinBalamurugan/Machine_Learning_Projects/blob/main/README.md)
 
 # Objective
-* Use PINN (_Physics Informed Neural Network_) to model reactions in a CSTR.
-* The model should handle the complexities of the reactions and be robust enough to provide accurate predictions even in the face of uncertainties or changes in the system parameters.
+Improve the performance of Neural Networks that model reactions in a CSTR.
 
 # Brief Description
 1. *Industrial Significance:*
@@ -15,15 +14,22 @@ Please refer: [My Project Collection](https://github.com/AswinBalamurugan/Machin
    * Isothermal conditions - rate constants don't change with time
 
 4. *Neural Networks:*
-   The aim is to develop predictive models that capture intricate dynamics, paving the way for more efficient and accurate modelling in chemical engineering. Integrating domain knowledge and ML capabilities using Physics-Informed Neural Networks (_PINN_) aims to contribute to process control and optimisation advancements within the chemical engineering domain.
+   The aim is to develop predictive models that capture intricate dynamics, paving the way for more efficient and accurate modelling in chemical engineering. Integrating domain knowledge and ML capabilities using Physics-Informed Neural Networks (_PINN_) aims to contribute to process control and optimisation advancements within the chemical engineering domain. The model should handle the complexities of the reactions and be robust enough to provide accurate predictions even in the face of uncertainties or changes in the system parameters.
 
 # Methodology
-The project was split into different stages:
-1. Data Generation
-2. Creating a reference model (without *PINN*) - [1 & 2](https://github.com/AswinBalamurugan/PINN-CSTR/tree/main/Data%20generation%20and%20Inital%20model)
-3. Simplifying dataset for better interpretation of results - [3](https://github.com/AswinBalamurugan/PINN-CSTR/tree/main/Simplify%20modelling)
-4. Modelling *'flow rate'* varied dataset using *PINN*
-5. Create the final model with *PINN* - [4 & 5](https://github.com/AswinBalamurugan/PINN-CSTR/tree/main/PINN%20for%20flow%20rate%20and%20final%20model)
+
+![Different Stages of the Project](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/pinn_cstrdrawio.png)
+
+[Group 1](https://github.com/AswinBalamurugan/PINN-CSTR/tree/main/Data%20generation%20and%20Inital%20model)
+   * Data Generation
+   * Creating a reference model (without PINN) 
+
+[Group 2](https://github.com/AswinBalamurugan/PINN-CSTR/tree/main/Simplify%20modelling)
+   * Simplifying dataset for better interpretation of results
+
+[Group 3](https://github.com/AswinBalamurugan/PINN-CSTR/tree/main/PINN%20for%20flow%20rate%20and%20final%20model)
+   * Modelling 'flow rate' varied dataset using PINN
+   * Create the final model with PINN
 
 (_Links provide more reasoning and analysis for each step._)
 
