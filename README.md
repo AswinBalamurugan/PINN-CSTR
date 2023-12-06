@@ -43,7 +43,7 @@ Improve the performance of Neural Networks that model reactions in a CSTR.
 ### Initial Model
 * Common options like `train_test_split` do not work all the time. In this case, it leads to indeterminate loss and accuracy curves. Both the **train** and **test** curves were identical. (created new column `ID` to split the data)
 * The most commonly used _ReLU_ (Rectified Linear Unit) activation led to highly fluctuating curves. (_Tanh_ was chosen)
-* Unable to take advantage of _**GPU**_ while training due to the bottleneck being the huge data transfer from CPU --> GPU.
+* Unable to take advantage of _**GPU**_ while training due to the bottleneck being the huge data transfer from CPU -> GPU.
 * Even though the final accuracy of the trained model is very high, the actual predictions barely matched the actual values. The R2 score doesn't fully explain the performance of the model.
 
 ### Simplified datasets
