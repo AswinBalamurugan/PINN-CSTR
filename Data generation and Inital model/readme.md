@@ -42,7 +42,7 @@ Additionally, *four* more datasets were created (*reason in below sub-section*) 
 3. Varying only the **initial concentration of A**
 4. Varying only the **initial concentration of B**
 
-## Neural Network Reference Model
+# Neural Network Reference Model
 After generating the training data, a simple neural network model was required as a reference to understand the effects of using PINN.
 The data was split into train and test data first; **4000** IDs were training, and the remaining were test data.
 Initially, the `train_test_split` module of the `sklearn` python library was used, which led to identical train and test loss curves.
