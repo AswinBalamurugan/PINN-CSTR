@@ -1,7 +1,7 @@
 Please refer: [My Project Collection](https://github.com/AswinBalamurugan/Machine_Learning_Projects/blob/main/README.md)
 
 # Objective
-* Use PINN to model reactions in a CSTR.
+* Use PINN (_Physics Informed Neural Network_) to model reactions in a CSTR.
 * The model should handle the complexities of the reactions and be robust enough to provide accurate predictions even in the face of uncertainties or changes in the system parameters.
 
 # Brief Description
