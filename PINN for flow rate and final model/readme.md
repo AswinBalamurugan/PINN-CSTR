@@ -12,8 +12,12 @@ Computed PINN loss using the _MSE_ between the actual and obtained gradients.
 The computed PINN loss is then added to the loss function of the neural network model.
 * _Note: To ensure the computed gradients are accurate, I set the batch size as 500, i.e., the time steps for each simulation._
 
+|PINN results in smooth learning|
+|-------------|
+|![smooth](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/pinn_flow_rate.png)|
+
 # Final Model
-After successfully implementing PINN for the varying flow rates, the same model was initially used for the training dataset created to compare its performance with the reference neural network model.
+After successfully implementing PINN for the varying flow rates, the same model was initially used for the training dataset to compare its performance with the reference neural network model.
 The final model architecture is as given below:
 * 4 hidden layers
 * 8 input nodes and 5 output nodes
@@ -21,6 +25,10 @@ The final model architecture is as given below:
 * Batch size: 500
 * 50 training epochs
 This model took close to 5 hours to train.
+
+|Accuracy curves for Final Model|Predictions of Final Model|
+|-------------|-----------|
+|![final](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/final_pinn.png)|![pred](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/final_pred.png)|
 
 # Conclusions
 * Successfully implement PINN in the case of **variable flow rate**.
