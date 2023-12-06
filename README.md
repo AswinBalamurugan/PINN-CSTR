@@ -20,15 +20,38 @@ Please refer: [My Project Collection](https://github.com/AswinBalamurugan/Machin
 # Methodology
 The project was split into different stages:
 1. Data Generation
-2. Creating a reference model (without *PINN*)
-3. Simplifying dataset for better interpretation of results
+2. Creating a reference model (without *PINN*) - [1 & 2](https://github.com/AswinBalamurugan/PINN-CSTR/tree/main/Data%20generation%20and%20Inital%20model)
+3. Simplifying dataset for better interpretation of results - [3](https://github.com/AswinBalamurugan/PINN-CSTR/tree/main/Simplify%20modelling)
 4. Modelling *'flow rate'* varied dataset using *PINN*
-5. Create the final model with *PINN*
-   
-*(The links have further explanation for each stage.)*
+5. Create the final model with *PINN* - [4 & 5](https://github.com/AswinBalamurugan/PINN-CSTR/tree/main/PINN%20for%20flow%20rate%20and%20final%20model)
+(_Links provide more reasoning and analysis for each step._)
+
+# Interesting Insights
+## Data Generation
+* Total time for simulation varies as we change the parameter (assumed to be 4*space-time)
+* Adding uniform noise for all concentrations isn't feasible since some vary more other others. (noise of order of change in concentrations)
+* Making time dimensionless helps the model to learn the dynamics better.
+
+## Initial Model
+* Common options like `train_test_split` do not work all the time. In this case, it leads to indeterminate loss and accuracy curves. Both the **train** and **test** curves were identical. (created new column `ID` to split the data)
+* The most commonly used _ReLU_ (Rectified Linear Unit) activation led to highly fluctuating curves. (_Tanh_ was chosen)
+* Unable to take advantage of _**GPU**_ while training due to the bottleneck being the huge data transfer from CPU --> GPU.
+* Even though the final accuracy of the trained model is very high, the actual predictions barely matched the actual values. The R2 score doesn't fully explain the performance of the model.
+
+## Simplified datasets
+* Varying several parameters hyperparameters simultaneously makes it difficult to infer the resulting plots of model performance. It is almost impossible to figure out the fluctuations in the visualised plots without reducing the number of parameters that were varied.
+* Identify which parameter leads to the fluctuations for further analysis.
+
+## PINN for flow rate
+* While computing gradients, the volume parameter is in the denominator. Hence, the variables must be rescaled to avoid division by zero, which would lead to infinite PINN loss.
+* Since the forward difference method is used, remember to skip the first set of concentrations (_at t=0_) while computing _actual gradients_.
+* To ensure that the gradient values are accurate, the batch size has to be set to 500, i.e., the number of data points for each simulation. This is due to the fact that the gradient is calculated wrt **time**.
+
+## Final Modelling
+* What works for varying flow rates may or may not work for the entire dataset. This includes parameters like the model architecture, activations, learning rates and the coefficient for the PINN loss (currently 100).
+* Any change in the above parameters drastically affects the model's performance.
 
 # Conclusion
-
 1. *Comprehensive Neural Network Understanding:*
    I delved into various Neural Network concepts throughout this project, including activation functions, optimisers, and result interpretation. This foundational knowledge laid the groundwork for the subsequent incorporation of advanced concepts.
 
