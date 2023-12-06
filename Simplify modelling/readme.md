@@ -11,6 +11,10 @@ The modelling and plotting of results were repeated for each of the four dataset
 3. Variable Initial Concentration of A
 4. Variable Initial Concentration of B
 
+|Fluctuating curves for **variable Flow Rate**|Smooth curves for **Concentration of A**|
+|---|---|
+|![flow](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/fluc_flow_rate.png)|![others](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/smooth_others.png)|
+
 # Conclusions
 The model fits well, and the test accuracy curves didn't fluctuate the datasets except for **variable flow rate**.
 The model cannot capture the complex dynamics in the **variable flow rate** case. 
