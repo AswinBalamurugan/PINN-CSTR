@@ -59,6 +59,12 @@ Improve the performance of Neural Networks that model reactions in a CSTR.
 * What works for varying flow rates may or may not work for the entire dataset. This includes parameters like the model architecture, activations, learning rates and the coefficient for the PINN loss (currently 100).
 * Any change in the above parameters drastically affects the model's performance.
 
+|Neural Network **without** PINN loss|Neural Network **with** PINN loss|
+|--------|--------|
+|![w/opinns](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/ref_model.png)|![pinns](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/final_pinn.png)|
+
+_Implementing PINN has increased the performance of the Neural Network model and led to smoother learning curves._
+
 # Conclusion
 1. *Comprehensive Neural Network Understanding:*
    I delved into various Neural Network concepts throughout this project, including activation functions, optimisers, and result interpretation. This foundational knowledge laid the groundwork for the subsequent incorporation of advanced concepts.
