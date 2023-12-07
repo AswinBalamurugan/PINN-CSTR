@@ -75,6 +75,8 @@ _Implementing PINN has increased the performance of the Neural Network model and
 3. *Model Application and Future Scalability:*
    The trained model showcases its capability to predict output concentrations of species in an unsteady state within an ideal CSTR. Hyper-parameter tuning and incorporating additional data could further enhance the model's scalability, making it suitable for deployment at an industry level.
 
-
+|Reference Model Predictions|PINN model predictions|
+|--------|--------|
+|![w/opinns](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/bad_pred.png)|![pinns](https://github.com/AswinBalamurugan/PINN-CSTR/blob/main/images/final_pred.png)|
 
 
